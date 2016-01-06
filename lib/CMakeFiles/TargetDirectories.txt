@@ -1,0 +1,2 @@
+/home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/gtest.dir
+/home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/gtest_main.dir

@@ -1,0 +1,57 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4055616234/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4055616234.dir/build.make CMakeFiles/cmTryCompileExec4055616234.dir/build
+make[1]: Entering directory '/home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4055616234.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4055616234.dir/CheckSymbolExists.c.o   -c /home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec4055616234
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4055616234.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4055616234.dir/CheckSymbolExists.c.o  -o cmTryCompileExec4055616234 -rdynamic 
+CMakeFiles/cmTryCompileExec4055616234.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec4055616234.dir/build.make:88: recipe for target 'cmTryCompileExec4055616234' failed
+make[1]: *** [cmTryCompileExec4055616234] Error 1
+make[1]: Leaving directory '/home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec4055616234/fast' failed
+make: *** [cmTryCompileExec4055616234/fast] Error 2
+
+File /home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2545584516/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2545584516.dir/build.make CMakeFiles/cmTryCompileExec2545584516.dir/build
+make[1]: Entering directory '/home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2545584516.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2545584516.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2545584516
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2545584516.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2545584516.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2545584516 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2545584516.dir/build.make:88: recipe for target 'cmTryCompileExec2545584516' failed
+make[1]: *** [cmTryCompileExec2545584516] Error 1
+make[1]: Leaving directory '/home/wulax/workspace/gtest-1.7.0/lib/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec2545584516/fast' failed
+make: *** [cmTryCompileExec2545584516/fast] Error 2
+
+
